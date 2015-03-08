@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Secure Login Server</title>
+</head>
+<body bgcolor="#333333">
+<script type="text/javascript" src="sjcl.js"></script>
+
+<script type="text/javascript">
+  function login() {
+    password = document.getElementById("password").value;
+    hash = sjcl.hash.sha256.hash(password);
+    digest = sjcl.codec.hex.fromBits(hash);
+
+    if (hash == "9d155eb5bfe7f2371840c702e21f7a6e7af2d60d5c2c0b4fbace2ed71cf62fa9") {
+      alert("Correct!");
+      document.location="a836b3e5c481c17c3d25313965a7f9d5d5e7728e.html";
+    }
+    else {
+      alert("Incorrect password!");
+    }
+  }
+</script>
+<div style="position:relative; padding:5px;top:50px; left:38%; width:500px; height:150px; background-color:#FF9933;">
+<div style="text-align:center">
+<p>Welcome to the Secure Login Server.</p>
+<p>Please enter the password:</p>
+<form action="index.html" method="post">
+<input type="password" id="password" size="8" />
+<br/>
+<input type="submit" value="Log in" onclick="login(); return false;" />
+</form>
+</div>
+</div>
+</body>
+</html>
