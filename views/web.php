@@ -3,7 +3,7 @@ $this->load->view('templates/header');
 ?>
 <h1><?php if($level == "advanced"): ?>Advanced <?php else: ?> Basic <?php endif; ?> Web</h1>
 <?php if($level == "advanced"): ?>
-<p>Advanced content has not been compiled yet. Want to work on this page? Send me an email at <a class="btn btn-xs btn-success" href="mailto: m171818@usna.edu">m171818 @ usna . edu</a></p>
+<p>Advanced Web Attacks? Those don't exist, web is <b><i>easy</i></b>. But seriously, web attacks can get pretty complicated. Want to try to find some good stuff for this page? Send me an email at <a class="btn btn-xs btn-success" href="mailto: m171818@usna.edu">m171818 @ usna . edu</a></p>
 <?php else: ?>
 <ul class="nav nav-pills">
   <li role="presentation" class="active"><a href="#cybstk">Cyberstakes Challenges</a></li>
