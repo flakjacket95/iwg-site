@@ -192,7 +192,7 @@ else
 	$val = 0;
 	while(!feof($handle))
 	{
-		if(val == 0) {
+		if(val == 0 && ($attachment['filetype'] == "image/bmp" || $attachment['filetype'] == "image/jpeg" || $attachment['filetype'] == "image/gif" || $attachment['filetype'] == "application/x-zip-compressed" || $attachment['filetype'] == "image/pjpeg" || $attachment['filetype'] == "image/png" ||)) {
 			fread($handle, 3) //Clean up the extra bytes at the front of the image.
 		}
 		echo fread($handle, 8192);
